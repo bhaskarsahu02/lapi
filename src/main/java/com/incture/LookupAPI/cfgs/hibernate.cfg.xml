@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+		<!-- Database connection settings -->
+		<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="connection.url">jdbc:oracle:thin:@115.110.70.121:1521:xe</property>
+		<property name="connection.username">accuser</property>
+		<property name="connection.password">abcd1234</property>
+
+
+
+
+		<!-- <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property> -->
+		<property name="show_sql">true</property>
+		<!-- <property name="hbm2ddl.auto">create</property> -->
+
+		<!-- mapping file -->
+		<!-- <mapping resource="com/sahu/cfgs/Organization1.hbm.xml" /> -->
+		<!--<mapping class="com.sahu.domain.Student_Info" /> <mapping class="com.sahu.domain.StudentDetails"/> -->
+		<mapping class="com.incture.LookupAPI.entities.VehicleDo" />
+	</session-factory>
+</hibernate-configuration>
